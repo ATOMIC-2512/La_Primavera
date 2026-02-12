@@ -422,61 +422,6 @@ html {
     font-weight: bold;
 }
 
-/* ===== CONTACTO SECTION ===== */
-.contacto-section {
-    background: var(--color-light);
-}
-
-.contact-info {
-    background: var(--color-white);
-    padding: 2.5rem;
-    border-radius: 20px;
-    box-shadow: var(--shadow-md);
-    height: 100%;
-}
-
-.contact-info h3 {
-    font-family: var(--font-display);
-    color: var(--color-primary);
-    font-size: 1.75rem;
-    font-weight: 700;
-}
-
-.contact-item {
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--color-border);
-}
-
-.contact-item:last-child {
-    border-bottom: none;
-}
-
-.contact-icon {
-    font-size: 2rem;
-    flex-shrink: 0;
-}
-
-.contact-details h4 {
-    font-weight: 700;
-    color: var(--color-primary);
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-}
-
-.contact-details p {
-    color: var(--color-text-light);
-    margin-bottom: 0;
-    line-height: 1.6;
-}
-
-.highlight-text {
-    color: var(--color-accent) !important;
-    font-weight: 700 !important;
-}
-
 /* ===== FOOTER ===== */
 .footer {
     background: var(--color-dark);
@@ -492,27 +437,38 @@ html {
     font-size: 1.5rem;
 }
 
+.footer-heading {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+}
+
 .footer-text {
     color: rgba(255, 255, 255, 0.8);
     font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.footer-highlight {
+    color: var(--color-secondary);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
 }
 
 .social-links {
     display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-}
-
-@media (min-width: 768px) {
-    .social-links {
-        justify-content: flex-end;
-    }
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .social-link {
     color: var(--color-secondary);
     text-decoration: none;
     font-weight: 600;
+    font-size: 0.9rem;
     transition: var(--transition-fast);
 }
 
@@ -523,7 +479,7 @@ html {
 
 .footer-divider {
     border-color: rgba(255, 255, 255, 0.2);
-    margin: 2rem 0;
+    margin: 2rem 0 1.5rem 0;
 }
 
 .footer-copyright {
