@@ -639,3 +639,218 @@ html {
         scroll-behavior: smooth;
     }
 }
+
+/* ===== SECCIONES DE CATEGORÍAS ===== */
+.categorias-section {
+    background: var(--color-white);
+}
+
+.categoria-container {
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.categoria-titulo-wrapper {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem 0;
+}
+
+.categoria-titulo {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--color-primary);
+    position: relative;
+    display: inline-block;
+    margin: 0;
+}
+
+.categoria-titulo::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--gradient-secondary);
+    border-radius: 2px;
+}
+
+/* ===== CARRUSEL DE CATEGORÍAS ===== */
+.categoria-carousel {
+    background: linear-gradient(135deg, var(--color-light) 0%, var(--color-white) 100%);
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.categoria-carousel .carousel-inner {
+    width: 100%;
+}
+
+.categoria-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+}
+
+.categoria-img:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+.categoria-carousel .carousel-control-prev,
+.categoria-carousel .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color-primary);
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.categoria-carousel .carousel-control-prev {
+    left: 10px;
+}
+
+.categoria-carousel .carousel-control-next {
+    right: 10px;
+}
+
+.categoria-carousel .carousel-control-prev:hover,
+.categoria-carousel .carousel-control-next:hover {
+    opacity: 1;
+    background: var(--color-accent);
+}
+
+.categoria-carousel .carousel-control-prev-icon,
+.categoria-carousel .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* ===== FRAME DE INFORMACIÓN ===== */
+.info-frame {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    padding: 3rem;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.info-frame::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(247, 183, 49, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.info-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.info-titulo {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--color-secondary);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.info-descripcion {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.95);
+    position: relative;
+    z-index: 1;
+}
+
+.info-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.info-lista li {
+    padding: 0.75rem 0;
+    padding-left: 2rem;
+    position: relative;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.info-lista li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* ===== RESPONSIVE CATEGORÍAS ===== */
+@media (max-width: 991px) {
+    .categoria-titulo {
+        font-size: 2rem;
+    }
+    
+    .categoria-carousel,
+    .info-frame {
+        min-height: 350px;
+    }
+    
+    .info-frame {
+        padding: 2rem;
+        margin-top: 0;
+    }
+    
+    .categoria-img {
+        height: 150px;
+    }
+    
+    .info-titulo {
+        font-size: 1.5rem;
+    }
+    
+    .info-descripcion {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .categoria-carousel,
+    .info-frame {
+        min-height: 300px;
+    }
+    
+    .categoria-img {
+        height: 120px;
+    }
+    
+    .info-icon {
+        font-size: 3rem;
+    }
+}

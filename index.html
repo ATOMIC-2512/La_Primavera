@@ -165,122 +165,370 @@
     </section>
 
     <!-- Productos Section -->
-    <section id="alimentos" class="productos-section py-5">
-        <div class="container">
-            <div class="section-header text-center mb-5">
-                <h2 class="section-title">Nuestros Productos</h2>
-                <p class="section-subtitle">Todo lo que necesitas, cuando lo necesitas</p>
-            </div>
-
-            <div class="row g-4">
-                <!-- Card 1 - Alimentos -->
-                <div class="col-md-6 col-lg-4" id="alimentos">
-                    <div class="product-card">
-                        <div class="card-icon">🥖</div>
-                        <h3 class="card-title">Alimentos</h3>
-                        <p class="card-description">
-                            Todos los productos básicos para tu hogar. Pan fresco, lácteos, 
-                            cereales, conservas y mucho más.
-                        </p>
-                        <ul class="card-list">
-                            <li>Pan recién horneado</li>
-                            <li>Productos lácteos</li>
-                            <li>Granos y cereales</li>
-                            <li>Enlatados y conservas</li>
-                        </ul>
-                    </div>
+    <section id="productos" class="categorias-section py-5">
+        <div class="container-fluid px-0">
+            
+            <!-- Sección 1: Alimentos (Carrusel izquierda, Info derecha) -->
+            <div id="alimentos" class="categoria-container">
+                <div class="categoria-titulo-wrapper">
+                    <h2 class="categoria-titulo">Alimentos</h2>
                 </div>
-
-                <!-- Card 2 - Bebidas -->
-                <div class="col-md-6 col-lg-4" id="bebidas">
-                    <div class="product-card">
-                        <div class="card-icon">🥤</div>
-                        <h3 class="card-title">Bebidas</h3>
-                        <p class="card-description">
-                            Amplia variedad de bebidas frías y calientes para cualquier 
-                            momento del día o la noche.
-                        </p>
-                        <ul class="card-list">
-                            <li>Refrescos y jugos</li>
-                            <li>Agua purificada</li>
-                            <li>Café y té</li>
-                            <li>Bebidas energéticas</li>
-                        </ul>
+                <div class="row g-0 align-items-center">
+                    <!-- Carrusel -->
+                    <div class="col-lg-6">
+                        <div id="carouselAlimentos" class="carousel slide categoria-carousel" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row g-3 p-4">
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/2d7a4f/ffffff?text=Pan+Fresco" class="categoria-img" alt="Pan fresco">
+                                        </div>
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/4ca36d/ffffff?text=Lacteos" class="categoria-img" alt="Lácteos">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row g-3 p-4">
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/f7b731/ffffff?text=Cereales" class="categoria-img" alt="Cereales">
+                                        </div>
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/2d7a4f/ffffff?text=Conservas" class="categoria-img" alt="Conservas">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselAlimentos" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselAlimentos" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Card 3 - Higiene -->
-                <div class="col-md-6 col-lg-4" id="higiene">
-                    <div class="product-card">
-                        <div class="card-icon">🧴</div>
-                        <h3 class="card-title">Higiene Personal</h3>
-                        <p class="card-description">
-                            Productos de cuidado personal y limpieza para toda la familia, 
-                            disponibles 24/7.
-                        </p>
-                        <ul class="card-list">
-                            <li>Jabones y shampoos</li>
-                            <li>Pasta dental</li>
-                            <li>Productos de higiene</li>
-                            <li>Artículos de bebé</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Card 4 - Hogar -->
-                <div class="col-md-6 col-lg-4" id="hogar">
-                    <div class="product-card">
-                        <div class="card-icon">🏠</div>
-                        <h3 class="card-title">Artículos del Hogar</h3>
-                        <p class="card-description">
-                            Todo lo necesario para mantener tu hogar limpio y organizado 
-                            en cualquier momento.
-                        </p>
-                        <ul class="card-list">
-                            <li>Productos de limpieza</li>
-                            <li>Bolsas y contenedores</li>
-                            <li>Utensilios básicos</li>
-                            <li>Artículos desechables</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Card 5 - Snacks -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="product-card">
-                        <div class="card-icon">🍬</div>
-                        <h3 class="card-title">Dulces y Snacks</h3>
-                        <p class="card-description">
-                            Para esos antojos nocturnos o cuando necesitas un snack rápido 
-                            a cualquier hora.
-                        </p>
-                        <ul class="card-list">
-                            <li>Chocolates y dulces</li>
-                            <li>Botanas saladas</li>
-                            <li>Galletas variadas</li>
-                            <li>Chicles y caramelos</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Card 6 - Servicios -->
-                <div class="col-md-6 col-lg-4" id="servicios">
-                    <div class="product-card">
-                        <div class="card-icon">⚡</div>
-                        <h3 class="card-title">Servicios</h3>
-                        <p class="card-description">
-                            Además de productos, ofrecemos servicios esenciales para tu 
-                            comodidad las 24 horas.
-                        </p>
-                        <ul class="card-list">
-                            <li>Recargas telefónicas</li>
-                            <li>Pagos de servicios</li>
-                            <li>Fotocopias</li>
-                            <li>Envío de paquetes</li>
-                        </ul>
+                    <!-- Frame de Información -->
+                    <div class="col-lg-6">
+                        <div class="info-frame">
+                            <div class="info-icon">🥖</div>
+                            <h3 class="info-titulo">Alimentos Frescos</h3>
+                            <p class="info-descripcion">
+                                Encuentra todos los productos básicos para tu hogar. Ofrecemos pan recién horneado 
+                                diariamente, productos lácteos de las mejores marcas, cereales nutritivos y una amplia 
+                                variedad de conservas y enlatados. Todo lo que necesitas para preparar deliciosas comidas 
+                                está disponible las 24 horas del día.
+                            </p>
+                            <ul class="info-lista">
+                                <li>Pan recién horneado</li>
+                                <li>Productos lácteos frescos</li>
+                                <li>Granos y cereales</li>
+                                <li>Enlatados y conservas</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Sección 2: Bebidas (Info izquierda, Carrusel derecha) -->
+            <div id="bebidas" class="categoria-container">
+                <div class="categoria-titulo-wrapper">
+                    <h2 class="categoria-titulo">Bebidas</h2>
+                </div>
+                <div class="row g-0 align-items-center">
+                    <!-- Frame de Información -->
+                    <div class="col-lg-6 order-lg-1 order-2">
+                        <div class="info-frame">
+                            <div class="info-icon">🥤</div>
+                            <h3 class="info-titulo">Bebidas Refrescantes</h3>
+                            <p class="info-descripcion">
+                                Amplia variedad de bebidas frías y calientes para cualquier momento del día o la noche. 
+                                Desde refrescos y jugos naturales, hasta café recién preparado y bebidas energéticas. 
+                                Mantente hidratado y con energía con nuestra selección de bebidas disponibles 24/7.
+                            </p>
+                            <ul class="info-lista">
+                                <li>Refrescos y jugos naturales</li>
+                                <li>Agua purificada</li>
+                                <li>Café y té preparado</li>
+                                <li>Bebidas energéticas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Carrusel -->
+                    <div class="col-lg-6 order-lg-2 order-1">
+                        <div id="carouselBebidas" class="carousel slide categoria-carousel" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row g-3 p-4">
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/4ca36d/ffffff?text=Refrescos" class="categoria-img" alt="Refrescos">
+                                        </div>
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/f7b731/ffffff?text=Jugos" class="categoria-img" alt="Jugos">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row g-3 p-4">
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/2d7a4f/ffffff?text=Cafe" class="categoria-img" alt="Café">
+                                        </div>
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/4ca36d/ffffff?text=Energeticas" class="categoria-img" alt="Energéticas">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselBebidas" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselBebidas" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección 3: Higiene (Carrusel izquierda, Info derecha) -->
+            <div id="higiene" class="categoria-container">
+                <div class="categoria-titulo-wrapper">
+                    <h2 class="categoria-titulo">Higiene Personal</h2>
+                </div>
+                <div class="row g-0 align-items-center">
+                    <!-- Carrusel -->
+                    <div class="col-lg-6">
+                        <div id="carouselHigiene" class="carousel slide categoria-carousel" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row g-3 p-4">
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/2d7a4f/ffffff?text=Shampoo" class="categoria-img" alt="Shampoo">
+                                        </div>
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/4ca36d/ffffff?text=Jabon" class="categoria-img" alt="Jabón">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row g-3 p-4">
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/f7b731/ffffff?text=Pasta+Dental" class="categoria-img" alt="Pasta dental">
+                                        </div>
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/2d7a4f/ffffff?text=Bebe" class="categoria-img" alt="Bebé">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHigiene" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselHigiene" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Frame de Información -->
+                    <div class="col-lg-6">
+                        <div class="info-frame">
+                            <div class="info-icon">🧴</div>
+                            <h3 class="info-titulo">Cuidado Personal</h3>
+                            <p class="info-descripcion">
+                                Productos de cuidado personal y limpieza para toda la familia, disponibles 24/7. 
+                                Encuentra shampoos, jabones, pasta dental y todo lo necesario para tu higiene diaria. 
+                                También contamos con productos especiales para el cuidado del bebé.
+                            </p>
+                            <ul class="info-lista">
+                                <li>Jabones y shampoos</li>
+                                <li>Pasta dental y enjuague bucal</li>
+                                <li>Productos de higiene femenina</li>
+                                <li>Artículos para bebé</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección 4: Hogar (Info izquierda, Carrusel derecha) -->
+            <div id="hogar" class="categoria-container">
+                <div class="categoria-titulo-wrapper">
+                    <h2 class="categoria-titulo">Artículos del Hogar</h2>
+                </div>
+                <div class="row g-0 align-items-center">
+                    <!-- Frame de Información -->
+                    <div class="col-lg-6 order-lg-1 order-2">
+                        <div class="info-frame">
+                            <div class="info-icon">🏠</div>
+                            <h3 class="info-titulo">Todo para tu Hogar</h3>
+                            <p class="info-descripcion">
+                                Todo lo necesario para mantener tu hogar limpio y organizado en cualquier momento. 
+                                Productos de limpieza de las mejores marcas, utensilios básicos, bolsas, contenedores 
+                                y artículos desechables. Mantén tu casa impecable con nuestra amplia variedad.
+                            </p>
+                            <ul class="info-lista">
+                                <li>Productos de limpieza</li>
+                                <li>Bolsas y contenedores</li>
+                                <li>Utensilios de cocina</li>
+                                <li>Artículos desechables</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Carrusel -->
+                    <div class="col-lg-6 order-lg-2 order-1">
+                        <div id="carouselHogar" class="carousel slide categoria-carousel" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row g-3 p-4">
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/4ca36d/ffffff?text=Limpieza" class="categoria-img" alt="Limpieza">
+                                        </div>
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/f7b731/ffffff?text=Utensilios" class="categoria-img" alt="Utensilios">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row g-3 p-4">
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/2d7a4f/ffffff?text=Bolsas" class="categoria-img" alt="Bolsas">
+                                        </div>
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/4ca36d/ffffff?text=Desechables" class="categoria-img" alt="Desechables">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHogar" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselHogar" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección 5: Snacks (Carrusel izquierda, Info derecha) -->
+            <div id="snacks" class="categoria-container">
+                <div class="categoria-titulo-wrapper">
+                    <h2 class="categoria-titulo">Dulces y Snacks</h2>
+                </div>
+                <div class="row g-0 align-items-center">
+                    <!-- Carrusel -->
+                    <div class="col-lg-6">
+                        <div id="carouselSnacks" class="carousel slide categoria-carousel" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row g-3 p-4">
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/2d7a4f/ffffff?text=Chocolates" class="categoria-img" alt="Chocolates">
+                                        </div>
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/4ca36d/ffffff?text=Botanas" class="categoria-img" alt="Botanas">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row g-3 p-4">
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/f7b731/ffffff?text=Galletas" class="categoria-img" alt="Galletas">
+                                        </div>
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/2d7a4f/ffffff?text=Chicles" class="categoria-img" alt="Chicles">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSnacks" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselSnacks" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Frame de Información -->
+                    <div class="col-lg-6">
+                        <div class="info-frame">
+                            <div class="info-icon">🍬</div>
+                            <h3 class="info-titulo">Antojos Perfectos</h3>
+                            <p class="info-descripcion">
+                                Para esos antojos nocturnos o cuando necesitas un snack rápido a cualquier hora. 
+                                Chocolates, dulces, botanas saladas, galletas y mucho más. Tenemos el antojo perfecto 
+                                para cualquier momento del día o la noche.
+                            </p>
+                            <ul class="info-lista">
+                                <li>Chocolates y dulces variados</li>
+                                <li>Botanas saladas</li>
+                                <li>Galletas de todas las marcas</li>
+                                <li>Chicles y caramelos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección 6: Servicios (Info izquierda, Carrusel derecha) -->
+            <div id="servicios" class="categoria-container">
+                <div class="categoria-titulo-wrapper">
+                    <h2 class="categoria-titulo">Servicios</h2>
+                </div>
+                <div class="row g-0 align-items-center">
+                    <!-- Frame de Información -->
+                    <div class="col-lg-6 order-lg-1 order-2">
+                        <div class="info-frame">
+                            <div class="info-icon">⚡</div>
+                            <h3 class="info-titulo">Servicios 24/7</h3>
+                            <p class="info-descripcion">
+                                Además de productos, ofrecemos servicios esenciales para tu comodidad las 24 horas. 
+                                Recargas telefónicas, pagos de servicios, fotocopias y envío de paquetes. Todo lo que 
+                                necesitas sin salir de tu zona.
+                            </p>
+                            <ul class="info-lista">
+                                <li>Recargas telefónicas</li>
+                                <li>Pagos de servicios (luz, agua, internet)</li>
+                                <li>Fotocopias e impresiones</li>
+                                <li>Envío de paquetes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Carrusel -->
+                    <div class="col-lg-6 order-lg-2 order-1">
+                        <div id="carouselServicios" class="carousel slide categoria-carousel" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row g-3 p-4">
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/4ca36d/ffffff?text=Recargas" class="categoria-img" alt="Recargas">
+                                        </div>
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/f7b731/ffffff?text=Pagos" class="categoria-img" alt="Pagos">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row g-3 p-4">
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/2d7a4f/ffffff?text=Fotocopias" class="categoria-img" alt="Fotocopias">
+                                        </div>
+                                        <div class="col-6">
+                                            <img src="https://placehold.co/400x400/4ca36d/ffffff?text=Paquetes" class="categoria-img" alt="Paquetes">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselServicios" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselServicios" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 

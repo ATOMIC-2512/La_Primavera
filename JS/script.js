@@ -86,24 +86,36 @@ function animarElementos() {
 
 // ===== INICIALIZAR CARRUSEL =====
 function inicializarCarrusel() {
-    // El carrusel de Bootstrap ya tiene autoplay por defecto
-    // Agregar pausa al hover para mejor UX
-    const carousel = document.querySelector('#heroCarousel');
-    if (carousel) {
-        carousel.addEventListener('mouseenter', function() {
-            const bsCarousel = bootstrap.Carousel.getInstance(carousel);
-            if (bsCarousel) {
-                bsCarousel.pause();
-            }
-        });
-        
-        carousel.addEventListener('mouseleave', function() {
-            const bsCarousel = bootstrap.Carousel.getInstance(carousel);
-            if (bsCarousel) {
-                bsCarousel.cycle();
-            }
-        });
-    }
+    // Lista de todos los carruseles
+    const carruseles = [
+        '#heroCarousel',
+        '#carouselAlimentos',
+        '#carouselBebidas',
+        '#carouselHigiene',
+        '#carouselHogar',
+        '#carouselSnacks',
+        '#carouselServicios'
+    ];
+    
+    carruseles.forEach(carouselId => {
+        const carousel = document.querySelector(carouselId);
+        if (carousel) {
+            // Agregar pausa al hover para mejor UX
+            carousel.addEventListener('mouseenter', function() {
+                const bsCarousel = bootstrap.Carousel.getInstance(carousel);
+                if (bsCarousel) {
+                    bsCarousel.pause();
+                }
+            });
+            
+            carousel.addEventListener('mouseleave', function() {
+                const bsCarousel = bootstrap.Carousel.getInstance(carousel);
+                if (bsCarousel) {
+                    bsCarousel.cycle();
+                }
+            });
+        }
+    });
 }
 
 // ===== MENSAJES DINÁMICOS =====
