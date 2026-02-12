@@ -72,10 +72,16 @@ function animarElementos() {
         observador.observe(card);
     });
     
-    // Observar elementos de contacto
-    document.querySelectorAll('.contact-item').forEach(item => {
-        observador.observe(item);
-    });
+    // Observar la sección de quiénes somos
+    const quienesSomos = document.querySelector('.tienda-image-wrapper');
+    if (quienesSomos) {
+        observador.observe(quienesSomos);
+    }
+    
+    const nosotrosContenedor = document.querySelector('.nosotros-contenedor');
+    if (nosotrosContenedor) {
+        observador.observe(nosotrosContenedor);
+    }
 }
 
 // ===== INICIALIZAR CARRUSEL =====

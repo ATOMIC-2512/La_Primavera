@@ -34,6 +34,9 @@
                             <a class="nav-link" href="#inicio">Inicio</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#quienes-somos">Quiénes Somos</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#alimentos">Alimentos</a>
                         </li>
                         <li class="nav-item">
@@ -56,69 +59,104 @@
 
     <!-- Hero Section -->
     <section id="inicio" class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="container position-relative">
-            <div class="row align-items-center min-vh-100">
-                <div class="col-lg-6">
-                    <div class="hero-content">
-                        <div class="badge-24">ABIERTO 24/7</div>
-                        <h1 class="hero-title">La Primavera</h1>
-                        <p class="hero-subtitle">Tu tienda de confianza desde septiembre 2016</p>
-                        <p class="hero-description">
-                            Más de 8 años sirviendo a nuestra comunidad con los mejores productos, 
-                            las 24 horas del día, los 7 días de la semana. Porque tus necesidades 
-                            no tienen horario.
-                        </p>
+        <div class="hero-carousel-fullwidth">
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://placehold.co/1920x600/2d7a4f/ffffff?text=La+Primavera+24/7" class="d-block w-100" alt="Interior de La Primavera">
+                        <div class="carousel-caption">
+                            <h5>Siempre Abiertos para Ti</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/1920x600/4ca36d/ffffff?text=Productos+Frescos" class="d-block w-100" alt="Productos frescos">
+                        <div class="carousel-caption">
+                            <h5>Productos Frescos Diariamente</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/1920x600/f7b731/ffffff?text=Gran+Variedad" class="d-block w-100" alt="Gran variedad">
+                        <div class="carousel-caption">
+                            <h5>Amplia Variedad de Productos</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/1920x600/2d7a4f/f7b731?text=Atencion+Nocturna" class="d-block w-100" alt="Atención 24/7">
+                        <div class="carousel-caption">
+                            <h5>Atención de Noche y Día</h5>
+                        </div>
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quién Somos Section -->
+    <section id="quienes-somos" class="quienes-somos-section py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title">¿Quién Somos?</h2>
+            </div>
+
+            <div class="row align-items-center g-5">
+                <!-- Imagen de la tienda -->
                 <div class="col-lg-6">
-                    <div class="carousel-wrapper">
-                        <!-- 
-                        INSTRUCCIONES PARA CAMBIAR LAS IMÁGENES:
-                        1. Guarda tus imágenes en la misma carpeta que index.html
-                        2. Nómbralas por ejemplo: imagen1.jpg, imagen2.jpg, etc.
-                        3. Cambia las URLs de abajo por: src="imagen1.jpg"
-                        4. Las imágenes deben ser horizontales, idealmente 800x600px
-                        -->
-                        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+                    <div class="tienda-image-wrapper">
+                        <!-- Reemplaza esta URL con tu imagen de la tienda -->
+                        <img src="tienda.jpg" alt="La Primavera - Nuestra Tienda" class="tienda-image">
+                    </div>
+                </div>
+
+                <!-- Contenedor de texto -->
+                <div class="col-lg-6">
+                    <div class="nosotros-contenedor">
+                        <h3 class="nosotros-titulo">Nosotros</h3>
+                        <p class="nosotros-texto">
+                            Somos <strong>La Primavera</strong>, una tienda de conveniencia comprometida con nuestra 
+                            comunidad desde septiembre de 2016. Nacimos con la visión de estar siempre disponibles 
+                            para nuestros clientes, sin importar la hora del día o la noche.
+                        </p>
+                        <p class="nosotros-texto">
+                            Con más de 8 años de experiencia, nos hemos convertido en el aliado de confianza 
+                            de familias, trabajadores nocturnos y toda persona que necesita productos de calidad 
+                            a cualquier hora. Nuestra filosofía es simple: <em>"Tus necesidades no tienen horario, 
+                            y nosotros tampoco"</em>.
+                        </p>
+                        <p class="nosotros-texto">
+                            Ofrecemos una amplia variedad de productos esenciales, desde alimentos frescos hasta 
+                            artículos de higiene y hogar, siempre con el mejor servicio y los precios más competitivos. 
+                            Nuestro equipo está capacitado para brindarte atención personalizada las 24 horas del día, 
+                            los 7 días de la semana.
+                        </p>
+                        <div class="nosotros-valores mt-4">
+                            <div class="valor-item">
+                                <span class="valor-icon">✓</span>
+                                <span class="valor-text">Disponibilidad 24/7</span>
                             </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="https://placehold.co/800x600/2d7a4f/ffffff?text=La+Primavera+24/7" class="d-block w-100" alt="Interior de La Primavera">
-                                    <div class="carousel-caption">
-                                        <h5>Siempre Abiertos para Ti</h5>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://placehold.co/800x600/4ca36d/ffffff?text=Productos+Frescos" class="d-block w-100" alt="Productos frescos">
-                                    <div class="carousel-caption">
-                                        <h5>Productos Frescos Diariamente</h5>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://placehold.co/800x600/f7b731/ffffff?text=Gran+Variedad" class="d-block w-100" alt="Gran variedad">
-                                    <div class="carousel-caption">
-                                        <h5>Amplia Variedad de Productos</h5>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://placehold.co/800x600/2d7a4f/f7b731?text=Atencion+Nocturna" class="d-block w-100" alt="Atención 24/7">
-                                    <div class="carousel-caption">
-                                        <h5>Atención de Noche y Día</h5>
-                                    </div>
-                                </div>
+                            <div class="valor-item">
+                                <span class="valor-icon">✓</span>
+                                <span class="valor-text">Productos de calidad</span>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </button>
+                            <div class="valor-item">
+                                <span class="valor-icon">✓</span>
+                                <span class="valor-text">Atención personalizada</span>
+                            </div>
+                            <div class="valor-item">
+                                <span class="valor-icon">✓</span>
+                                <span class="valor-text">Compromiso con la comunidad</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -279,7 +317,7 @@
                         <strong>WhatsApp:</strong><br>
                         (312) 765-4321<br>
                         <strong>Email:</strong><br>
-                        contacto@laprimavera.com
+                        <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="25464a4b514446514a65494455574c4844534057440b464a48">[email&#160;protected]</a>
                     </p>
                 </div>
 
@@ -308,7 +346,7 @@
             </div>
         </div>
     </footer>
-                
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
